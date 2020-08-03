@@ -1,0 +1,7 @@
+.u-text-center {
+  text-align: center;
+}
+
+.text-gradient {
+  @include primary-gradient-text;
+}

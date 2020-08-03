@@ -1,0 +1,67 @@
+body,
+::placeholder {
+  color: $color-light;
+  font-size: $font-size-sm;
+  font-family: $font-family-sans;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+}
+
+body {
+  color: $color-light;
+  letter-spacing: $letter-spacing-normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+}
+
+h1 {
+  font-size: $font-size-4xl;
+}
+
+h2 {
+  font-size: $font-size-3xl;
+}
+
+h3 {
+  font-size: $font-size-2xl;
+}
+
+h4 {
+  font-size: $font-size-xl;
+}
+
+h5 {
+  font-size: $font-size-lg;
+}
+
+h6 {
+  font-size: $font-size-base;
+}
+
+label {
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  font-size: $font-size-sm;
+}
+
+textarea,
+input[type='text'],
+input[type='email'] {
+  font-family: inherit;
+  letter-spacing: 0.1rem;
+  font-size: $font-size-xl;
+
+  &::placeholder {
+    font-family: inherit;
+    letter-spacing: 0.1rem;
+    font-size: $font-size-xl;
+    color: rgba($color-dark, 0.6);
+  }
+}

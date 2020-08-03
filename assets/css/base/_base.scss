@@ -1,0 +1,88 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  outline: none;
+
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $color-dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+address {
+  margin-bottom: 2rem;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  display: inline-block;
+  transition: color 0.25s ease;
+
+  &:link,
+  &:visited {
+    color: $color-light;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &:active {
+    outline: 0;
+  }
+}
+
+a:hover,
+button:focus {
+  outline: 0;
+}
+
+ul,
+ol {
+  padding-left: 1rem;
+}
+
+textarea,
+input[type='text'],
+input[type='email'] {
+  width: 100%;
+  border: none;
+  padding: 1rem 1.5rem;
+  transition: all 0.2s ease-out;
+  border-bottom: 0.3rem solid transparent;
+  background-color: rgba($color-gray, 0.15);
+
+  &:focus {
+    outline: none;
+    border-bottom: 0.3rem solid $color-primary;
+    box-shadow: 0 1rem 2rem rgba($color-dark, 0.1);
+
+    &:invalid {
+      border-bottom: 0.3rem solid $color-danger;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+  <head {{ HEAD_ATTRS }}>
+    {{ HEAD }}
+  </head>
+  <body {{ BODY_ATTRS }}>
+    {{ APP }}
+
+    <form
+      hidden
+      netlify
+      method="POST"
+      name="contact-form"
+      netlify-honeypot="bot-field"
+    >
+      <input type="text" name="name" placeholder="Erika Mustermann" />
+
+      <input
+        required
+        type="email"
+        name="email"
+        placeholder="erika.mustermann@test.de"
+      />
+
+      <textarea
+        rows="4"
+        required
+        name="message"
+        placeholder="Ich würde gern am XX.XX. für ein Kennenlernen vorbeikommen ..."
+      ></textarea>
+    </form>
+  </body>
+</html>

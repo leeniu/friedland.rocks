@@ -1,0 +1,26 @@
+.footer {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+
+  &__navigation {
+    width: 100%;
+  }
+
+  &_list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    @include media-adapter(small) {
+      flex-direction: column;
+    }
+  }
+
+  &_list-element {
+    margin-right: 2rem;
+  }
+}

@@ -1,0 +1,169 @@
+.home {
+  padding: 1.2rem;
+
+  @include media-adapter(small) {
+    padding: 0;
+  }
+
+  overflow: hidden;
+  position: relative;
+
+  section {
+    position: relative;
+    padding: 8rem 0;
+    @include skew-background;
+  }
+
+  &-features {
+    margin-top: -10rem;
+
+    @include media-adapter(small) {
+      margin-top: -2rem;
+    }
+
+    z-index: 40;
+    background-color: $color-dark;
+
+    &__layout {
+      @include containerize;
+    }
+
+    &__headline {
+      font-weight: 900;
+      display: block;
+      text-align: center;
+      margin-bottom: 6rem;
+      text-transform: uppercase;
+    }
+
+    &__content {
+      display: grid;
+      gap: 5rem;
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
+
+    &__article {
+      &-heading {
+        font-weight: 300;
+        color: rgba($color-light, 0.75);
+        letter-spacing: 0.1rem;
+        font-size: $font-size-2xl;
+      }
+
+      &-text,
+      &-list {
+        font-weight: 300;
+        margin-bottom: 0;
+        letter-spacing: 0;
+        font-size: $font-size-xl;
+      }
+
+      &-text {
+        margin-bottom: 1rem;
+      }
+
+      &-list {
+        line-height: 1.8;
+      }
+    }
+
+    &__images {
+      z-index: 50;
+      position: relative;
+      padding: 10rem 0;
+      display: block;
+
+      @include media-adapter(small) {
+        display: none;
+      }
+
+      & > * {
+        border-radius: $border-radius-base;
+        z-index: 51;
+        transition: all 0.2s;
+        width: 55%;
+        position: absolute;
+
+        @include hover-pop-up;
+        &:hover {
+          z-index: 52;
+          outline-offset: 1rem;
+          outline: 0.8rem solid $color-primary;
+        }
+      }
+
+      &-1 {
+        left: 0;
+        top: -2rem;
+      }
+      &-2 {
+        right: 0;
+        top: 2rem;
+      }
+      &-3 {
+        left: 20%;
+        top: 8rem;
+      }
+    }
+  }
+
+  &-about {
+    z-index: 39;
+    background-image: linear-gradient(
+        to right top,
+        rgba(#3ccf91, 0.9),
+        rgba(#2fca95, 0.9),
+        rgba(#22c698, 0.9),
+        rgba(#13c19b, 0.9),
+        rgba(#00bc9d, 0.9)
+      ),
+      url(/images/about__band.jpg);
+    background-position: center;
+    background-size: cover;
+
+    &__layout {
+      @include containerize;
+    }
+
+    &__headline {
+      display: block;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 6rem;
+      text-transform: uppercase;
+    }
+
+    &__article {
+      &-heading {
+        font-weight: 300;
+        color: $color-gray;
+        font-size: $font-size-xl;
+      }
+      &-body {
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      }
+    }
+  }
+
+  &-cta {
+    text-align: center;
+    &__layout {
+      @include containerize;
+    }
+
+    &__headline {
+      font-weight: 900;
+      margin-bottom: 6rem;
+      text-transform: uppercase;
+    }
+
+    &__text {
+      margin-bottom: 4rem;
+      font-weight: 300;
+      letter-spacing: 0;
+      font-size: $font-size-xl;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.logo {
+  &__image {
+    margin-right: 1.5rem;
+  }
+
+  &__slogan {
+    font-size: $font-size-lg;
+    margin-left: -1.8rem;
+    letter-spacing: 0rem;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: $font-family-handwriting;
+  }
+}

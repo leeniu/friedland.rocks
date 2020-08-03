@@ -1,0 +1,89 @@
+.hero {
+  width: 100%;
+  height: 95vh;
+  overflow: hidden;
+  min-height: 25rem;
+  position: relative;
+  background-color: $color-dark;
+
+  &__overlay {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba($color-dark, 0.8);
+  }
+
+  &__video {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__content-box {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    animation: fade-in 2s ease-in-out;
+  }
+
+  &__headline {
+    margin-bottom: 3rem;
+    letter-spacing: 0.3rem;
+    font-size: $font-size-5xl;
+
+    @include media-adapter(small) {
+      margin-bottom: 2rem;
+      letter-spacing: 0.2rem;
+      font-size: $font-size-3xl;
+    }
+
+    backface-visibility: hidden;
+    animation: slide-in-left 1s ease-out 0.4s 1 normal backwards;
+
+    &--highlight {
+      font-style: italic;
+      @include primary-gradient-text;
+    }
+  }
+
+  &__tagline {
+    margin-bottom: 3rem;
+    font-size: $font-size-2xl;
+
+    @include media-adapter(small) {
+      margin-bottom: 2rem;
+      font-size: $font-size-lg;
+    }
+
+    font-weight: 300;
+    font-style: italic;
+    backface-visibility: hidden;
+    color: rgba($color-light, 0.6);
+    animation: slide-in-right 1s ease-out 0.4s 1 normal backwards;
+
+    &--highlight {
+      color: $color-light;
+      font-style: normal;
+    }
+  }
+
+  &__button {
+    animation: slide-in-bottom 0.5s ease-out 1s 1 normal backwards;
+  }
+}

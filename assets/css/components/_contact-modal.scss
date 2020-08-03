@@ -1,0 +1,16 @@
+.contact-modal {
+  &__content {
+    padding: 4rem;
+    color: $color-dark;
+  }
+
+  &__headline {
+    @include primary-gradient-text;
+    font-weight: 900;
+    line-height: 2.4rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    font-size: $font-size-3xl;
+  }
+}

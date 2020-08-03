@@ -1,0 +1,26 @@
+.contact-form {
+  display: grid;
+  row-gap: 1rem;
+  grid-template-columns: 100%;
+
+  &__element,
+  &__footer {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  &__loader {
+    margin-left: 2rem;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    fill: $color-primary;
+  }
+}
