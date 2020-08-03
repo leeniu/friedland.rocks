@@ -1,0 +1,39 @@
+.feature-box {
+  padding: 2rem;
+  max-width: 100%;
+
+  text-align: center;
+
+  border-radius: $border-radius-sm;
+  background-color: rgba($color-light, 0.8);
+  box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.15);
+
+  @include hover-pop-up;
+  transition: transform 0.3s;
+
+  &__icon i {
+    @include primary-gradient-text;
+    font-size: $font-size-6xl;
+    margin-bottom: 2rem;
+  }
+
+  &__headline {
+    font-weight: 700;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    font-size: $font-size-xl;
+    color: rgba($color-dark, 0.75);
+    @include media-adapter(small) {
+      font-size: $font-size-base;
+    }
+  }
+
+  &__content {
+    font-weight: 300;
+    margin-bottom: 0;
+    letter-spacing: 0;
+    word-wrap: break-word;
+    font-size: $font-size-lg;
+    color: rgba($color-dark, 0.5);
+  }
+}

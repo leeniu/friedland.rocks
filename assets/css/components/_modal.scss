@@ -1,0 +1,35 @@
+// TODO: animate closing
+.modal {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4rem;
+  color: $color-dark;
+
+  animation: fade-in 0.5s;
+  background-color: rgba($color-dark, 0.8);
+
+  &__box {
+    width: 100%;
+    position: relative;
+    max-width: $break-point-small;
+    border-radius: $border-radius-base;
+    background-color: $color-light;
+    animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+      both;
+  }
+
+  &__close-button {
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+  }
+}

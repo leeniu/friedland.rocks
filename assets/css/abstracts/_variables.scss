@@ -1,0 +1,42 @@
+// Break points (16px browser font size is presumed)
+$break-point-small: 37.5em; // 600px
+$break-point-medium: 56.25em; // 900px
+$break-point-large: 75em; // 1200px
+$break-point-extra-large: 112.5em; // 1800px
+
+$line-height-normal: 1.5;
+$letter-spacing-normal: 0.2rem;
+
+$font-weight-normal: 400;
+$font-family-sans: 'Roboto', sans-serif;
+$font-family-serif: 'Roboto Slab', serif;
+$font-family-handwriting: 'Marck Script', serif;
+
+$color-primary: #3ccf91; // https://mycolor.space/?hex=%233CCF91&sub=1
+$color-primary-darker: #00bc9d;
+$color-danger: #f2664a;
+$color-dark: #10141c; // https://mycolor.space/?hex=%2310141C&sub=1
+$color-gray: #c5cad5;
+$color-light: #ffffff;
+
+$clip-path-bottom: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+$clip-path-top-bottom: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+
+$nav-bar-height: 10rem;
+
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.5rem;
+$font-size-3xl: 1.875rem;
+$font-size-4xl: 2.25rem;
+$font-size-5xl: 3rem;
+$font-size-6xl: 4rem;
+
+$border-radius-base: 0.5rem;
+$border-radius-sm: 0.2rem;
+
+$skew-base: -4deg;
+$skew-base-rev: 4deg;

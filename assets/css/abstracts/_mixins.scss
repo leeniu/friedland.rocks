@@ -1,0 +1,83 @@
+// Media queries
+@mixin media-adapter($view) {
+  @if $view == small {
+    @media (max-width: $break-point-small) {
+      @content;
+    }
+  }
+
+  @if $view == medium {
+    @media (max-width: $break-point-medium) {
+      @content;
+    }
+  }
+
+  @if $view == large {
+    @media (max-width: $break-point-large) {
+      @content;
+    }
+  }
+
+  @if $view == desktop {
+    @media (min-width: $break-point-large) {
+      @content;
+    }
+  }
+}
+
+// Layout
+@mixin containerize {
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: $break-point-extra-large;
+}
+
+@mixin primary-gradient {
+  background-image: linear-gradient(
+    to right top,
+    $color-primary,
+    $color-primary-darker
+  );
+}
+
+@mixin radio-gradient {
+  background-image: radial-gradient($color-primary, $color-primary-darker);
+}
+
+@mixin primary-gradient-text {
+  color: transparent;
+  background-clip: text;
+  display: inline-block;
+  @include primary-gradient;
+}
+
+@mixin shadow-basic {
+  box-shadow: 0 1rem 2rem rgba($color-dark, 0.1);
+}
+
+@mixin shadow-extended {
+  box-shadow: 0 2.5rem 4rem rgba($color-dark, 0.3);
+}
+
+@mixin hover-pop-up {
+  @include shadow-basic;
+  transition: all 0.3s;
+  &:hover {
+    @include shadow-extended;
+    transform: translateY(-0.5rem) scale(1.05);
+  }
+}
+
+@mixin skew-background {
+  transform: skewY($skew-base);
+  & > * {
+    transform: skewY($skew-base-rev);
+  }
+}
+
+@mixin center-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
