@@ -1,4 +1,6 @@
-# friedlandrocks
+# Friedland Rocks! 
+
+Visit: [https://friedland.rocks](https://friedland.rocks)
 
 ## Build Setup
 
