@@ -18,13 +18,3 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
-
-## Notes
-
-### Zur Style-Entscheidung:
-
-BEM & 7-1
-
-## TODOs:
-
-- "Input" and "Textarea" have duplicate code, unify into "FormField"
