@@ -10,15 +10,10 @@ const meta = {
   type: 'Business',
   url: 'https://friedland.rocks',
   image: 'https://friedland.rocks/images/cover.jpg',
-  author: 'Malik Dirim <contact@malikdirim.de>',
+  author: 'Cappic90 <friedland.rocks@cappic90.de>'
 }
 
 export default {
-  /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
-  mode: 'universal',
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -38,87 +33,87 @@ export default {
       {
         hid: 'keywords',
         name: 'keywords',
-        content: meta.keywords,
+        content: meta.keywords
       },
       {
         hid: 'description',
         name: 'description',
-        content: meta.description,
+        content: meta.description
       },
       {
         hid: 'language',
         name: 'language',
-        content: meta.locale,
+        content: meta.locale
       },
       {
         hid: 'Classification',
         name: 'Classification',
-        content: meta.type,
+        content: meta.type
       },
       {
         hid: 'author',
         name: 'author',
-        content: meta.author,
+        content: meta.author
       },
       {
         hid: 'designer',
         name: 'designer',
-        content: meta.author,
+        content: meta.author
       },
       {
         hid: 'url',
         name: 'url',
-        content: meta.url,
+        content: meta.url
       },
       // Open Graph
       {
         hid: 'og:title',
         name: 'og:title',
-        content: meta.title,
+        content: meta.title
       },
       {
         hid: 'og:type',
         name: 'og:type',
-        content: meta.type,
+        content: meta.type
       },
       {
         hid: 'og:url',
         name: 'og:url',
-        content: meta.url,
+        content: meta.url
       },
       {
         hid: 'og:image',
         name: 'og:image',
-        content: meta.image,
+        content: meta.image
       },
 
       {
         hid: 'og:site_name',
         name: 'og:site_name',
-        content: meta.name,
+        content: meta.name
       },
       {
         hid: 'og:description',
         name: 'og:description',
-        content: meta.description,
+        content: meta.description
       },
 
       {
         hid: 'og:locale',
         name: 'og:locale',
-        content: meta.locale,
+        content: meta.locale
       },
       // Apple
       {
         hid: 'apple-mobile-web-app-title',
         name: 'apple-mobile-web-app-title',
-        content: meta.title,
-      },
+        content: meta.title
+      }
     ],
     htmlAttrs: {
-      lang: meta.locale,
+      lang: meta.locale
     },
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   /*
    ** Global CSS
@@ -142,15 +137,14 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/axios',
     // Docs: https://github.com/nuxt-community/robots-module
     [
       '@nuxtjs/robots',
       {
         UserAgent: '*',
         Disallow: ['/impressum', '/datenschutz'],
-        Sitemap: `${meta.url}/sitemap.xml`,
-      },
+        Sitemap: `${meta.url}/sitemap.xml`
+      }
     ],
     // Docs: https://github.com/nuxt-community/sitemap-module
     [
@@ -158,9 +152,9 @@ export default {
       {
         hostname: meta.url,
         gzip: true,
-        exclude: ['/impressum', '/datenschutz'],
-      },
-    ],
+        exclude: ['/impressum', '/datenschutz']
+      }
+    ]
   ],
   /*
    ** Build configuration
@@ -175,13 +169,13 @@ export default {
             name: 'styles',
             test: /\.(css|vue)$/,
             chunks: 'all',
-            enforce: true,
-          },
-        },
-      },
-    },
+            enforce: true
+          }
+        }
+      }
+    }
   },
   publicRuntimeConfig: {
-    baseURL: process.env.BASE_URL || 'https://friedland.rocks',
-  },
+    baseURL: process.env.BASE_URL || 'https://friedland.rocks'
+  }
 }
