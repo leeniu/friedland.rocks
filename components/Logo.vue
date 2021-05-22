@@ -1,6 +1,6 @@
 <template>
   <nuxt-link class="logo" to="/">
-    <ElectricGuitar v-bind="$attrs" class="logo__image"></ElectricGuitar>
+    <fr-electric-guitar v-bind="$attrs" class="logo__image" />
     <span v-if="slogan" class="logo__slogan"></span>
   </nuxt-link>
 </template>
@@ -11,8 +11,8 @@ export default {
   props: {
     slogan: {
       type: Boolean,
-      default: false,
-    },
-  },
+      default: false
+    }
+  }
 }
 </script>
