@@ -14,12 +14,12 @@
     "@dansmaculotte/nuxt-security": "0.0.3",
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/sitemap": "^2.4.0",
-    "nuxt": "^2.13.0"
+    "nuxt": "^2.15.6"
   },
   "devDependencies": {
     "@nuxtjs/pwa": "^3.0.0-beta.20",
-    "node-sass": "^5.0.0",
     "nuxt-purgecss": "^1.0.0",
+    "sass": "^1.34.0",
     "sass-loader": "^10.1.1"
   }
 }
